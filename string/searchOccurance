@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+int main(int argc, char const *argv[])
+{
+    char a[90];
+    int count=1,occu,flag=0,b;
+    printf("Enter the string: ");
+    gets(a);
+    printf("enter the character");
+    scanf("%c",&b);
+    int len=strlen(a);
+    occu=a[0];
+    for (int i = 0; i < len; i++)
+    {  
+        // printf("\nouter loop character is %c ",a[i]);
+        for (int j = i+1; j < len; j++)
+        {
+            //  printf("\ninner loop character is %c",a[j]);
+            if (a[i]==b)
+            {
+              occu=a[i];
+              count++;
+              printf("\n all occurance is %c--%d",occu,count);  
+            }
+        
+        }
+         
+    }
+    return 0;
+}
